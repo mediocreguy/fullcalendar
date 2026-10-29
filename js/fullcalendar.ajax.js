@@ -19,9 +19,9 @@ Backdrop.fullcalendar.fullcalendar.prototype.dateChange = function (fields) {
     for (var i in fields) {
       $cal.find('.views-widget-filter-' + i).hide();
       $.each(['min','max'], function (_, type) {
-        $cal.find('#edit-' + fields[i] + '-' + type + '-year').attr('value', date_parts[type][0]);
-        $cal.find('#edit-' + fields[i] + '-' + type + '-month').attr('value', date_parts[type][1]);
-        $cal.find('#edit-' + fields[i] + '-' + type + '-day').attr('value', date_parts[type][2]);
+        $cal.find('#edit-' + fields[i] + '-' + type + '-year').val(date_parts[type][0]);
+        $cal.find('#edit-' + fields[i] + '-' + type + '-month').val(date_parts[type][1]);
+        $cal.find('#edit-' + fields[i] + '-' + type + '-day').val(date_parts[type][2]);      
       });
     }
   }
